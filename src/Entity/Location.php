@@ -26,7 +26,7 @@ class Location
     private ?string $latitude = null;
 
     #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 7)]
-    private ?string $longtitude = null;
+    private ?string $longitude = null;
 
     /**
      * @var Collection<int, Measurement>
@@ -87,14 +87,14 @@ class Location
         return $this;
     }
 
-    public function getLongtitude(): ?string
+    public function getLongitude(): ?string
     {
-        return $this->longtitude;
+        return $this->longitude;
     }
 
-    public function setLongtitude(string $longtitude): static
+    public function setLongitude(string $longitude): static
     {
-        $this->longtitude = $longtitude;
+        $this->longitude = $longitude;
 
         return $this;
     }
