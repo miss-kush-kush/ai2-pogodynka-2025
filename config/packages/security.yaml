@@ -12,13 +12,15 @@ security:
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security:
+            security: false
         main:
             lazy: true
             provider: app_user_provider
             form_login:
                 login_path: app_login
                 check_path: app_login
+            login_throttling:
+                max_attempts: 3
             logout:
                 path: app_logout
                 target: app_login
